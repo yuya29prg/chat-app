@@ -3,12 +3,14 @@ package app.model;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
-@Entity
 @Data
 @Table(name = "user")
-public class User {
+@Entity
+public class User{
    @Id
    @Column(name = "id")
    @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,4 +21,10 @@ public class User {
 
    @Column(name = "create_date")
     private Date createDate;
+
+   @Column(name = "password")
+    private String password;
+
 }
+
+//public class User implements Serializable {
