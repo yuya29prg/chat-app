@@ -1,0 +1,10 @@
+app/model/User.class
+app/controller/UserController.class
+app/controller/MessageController.class
+app/dto/MessageRequest.class
+app/repository/UserRepository.class
+app/service/UserService.class
+app/App.class
+app/repository/MessageRepository.class
+app/model/Message.class
+app/service/MessageService.class

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>メッセージ作成</title>
+    <link href="/css/list.css" rel="stylesheet"></link>
+    <meta charset="utf-8" />
+</head>
+<div class="container">
+    <h1>メッセージ新規作成</h1>
+    <form th:action="@{/message/create}" th:object="${messageRequest}" th:method="post">
+        <div class="form-group">
+            <label>内容：<span class="text-danger">※</span></label>
+            <input type="text" th:field="*{text}" class="form-control">
+        </div>
+
+        <br />
+        <div class="text-center">
+            <a href="/message/list" class="btn btn-secondary">キャンセル</a>
+            <input type="submit" value="　登録　" class="btn btn-primary">
+        </div>
+    </form>
+</div>
+</body>
+</html>

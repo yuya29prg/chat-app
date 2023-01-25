@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>メッセージ一覧</title>
+    <link href="/css/list.css" rel="stylesheet"></link>
+    <meta charset="utf-8" />
+</head>
+<body>
+<h1>メッセージ一覧</h1>
+<table>
+    <thead>
+    <tr>
+        <th>名前</th>
+        <th>登録日時</th>
+        <th>内容</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="message : ${messagelist}" th:object="${message}">
+        <td class="center" th:text="*{userId}"></td>
+        <td th:text="*{createDate}"></td>
+        <td th:text="*{text}"></td>
+
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
