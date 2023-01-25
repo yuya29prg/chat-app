@@ -2,9 +2,13 @@ app/model/User.class
 app/controller/UserController.class
 app/controller/MessageController.class
 app/dto/MessageRequest.class
+app/config/WebSecurityConfig.class
 app/repository/UserRepository.class
 app/service/UserService.class
+app/service/CustomUserDetailsService.class
+app/config/CustomUserDetails.class
 app/App.class
 app/repository/MessageRepository.class
 app/model/Message.class
 app/service/MessageService.class
+app/dto/UserForm.class

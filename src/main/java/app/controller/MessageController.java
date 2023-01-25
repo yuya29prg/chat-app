@@ -28,6 +28,13 @@ public class MessageController {
         return "message/list";
     }
 
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public String home(Model model) {
+        List<Message> messagelist = messageService.searchAll();
+        model.addAttribute("messagelist",messagelist);
+        return "message/list";
+    }
+
     @GetMapping(value = "/message/new")
     public String displayAdd(Model model){
         model.addAttribute("messageRequest",new MessageRequest());
