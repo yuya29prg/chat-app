@@ -5,6 +5,8 @@ import app.model.Message;
 import app.service.MessageService;
 import net.bytebuddy.implementation.bind.MethodDelegationBinder;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -43,7 +45,10 @@ public class MessageController {
 
     @RequestMapping(value = "/message/create",method = RequestMethod.POST)
     public String create(@ModelAttribute MessageRequest messageRequest, BindingResult result, Model model){
-        messageService.create(messageRequest);
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        //Principalからログインユーザの情報を取得
+        String userName = auth.getName();
+        messageService.create(messageRequest,userName);
         return "redirect:/message/list";
     }
 

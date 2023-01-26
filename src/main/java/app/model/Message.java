@@ -14,12 +14,12 @@ public class Message {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "user_id")
-    private String userId;
-
     @Column(name = "create_date")
     private Date createDate;
 
     @Column(name = "text")
     private String text;
+
+    @Column(name = "user_name")
+    private String userName;
 }

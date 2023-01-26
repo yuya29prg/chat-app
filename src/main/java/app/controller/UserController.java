@@ -53,9 +53,9 @@ public class UserController {
 //        return "/login";
 //    }
 
-//    @GetMapping( "/login")
+//    @GetMapping( "/logout")
 //    public String getLogin() {
-//        return "login";
+//        return "redirect:/message/list";
 //    }
     @GetMapping(path = "login")
     public String login(@RequestParam(value = "error", required = false) String error,

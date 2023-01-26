@@ -10,6 +10,11 @@
 <a href="/message/new" class="btn btn-secondary">メッセージ作成</a>
 <a href="/user/list" class="btn btn-secondary">ユーザ一覧</a>
 <table>
+    <form th:action="@{/logout}" method="post">
+        <button class="logout-button">
+            ログアウト
+        </button>
+    </form>
     <thead>
     <tr>
         <th>名前</th>
@@ -20,7 +25,7 @@
     </thead>
     <tbody>
     <tr th:each="message : ${messagelist}" th:object="${message}">
-        <td class="center" th:text="*{userId}"></td>
+        <td class="center" th:text="*{userName}"></td>
         <td th:text="*{createDate}"></td>
         <td th:text="*{text}"></td>
 

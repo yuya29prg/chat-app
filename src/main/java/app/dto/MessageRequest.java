@@ -9,5 +9,5 @@ import java.util.Date;
 public class MessageRequest implements Serializable {
     private String text;
     private Date createDate;
-    private int userId;
+    private String userName;
 }

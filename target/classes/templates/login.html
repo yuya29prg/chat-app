@@ -8,6 +8,7 @@
     <link href="https://getbootstrap.com/docs/4.0/examples/signin/signin.css" rel="stylesheet" crossorigin="anonymous"/>
 </head>
 <body>
+<h1>電子掲示板アプリ</h1>
 <div class="container">
     <form class="form-signin" th:action="@{/login}" method="post">
 <!--        <div th:if="${showErrorMsg}" class="alert alert-danger" role="alert" th:text="${errorMsg}">-->
@@ -16,7 +17,6 @@
 <!--        <div th:if="${showLogoutedMsg}" class="alert alert-success" role="alert" th:text="#{demo.login.logouted}">-->
 <!--            ※ログアウトメッセージ※-->
 <!--        </div>-->
-
         <p>
             <input type="text" id="username" name="username" class="form-control" placeholder="ユーザID" required autofocus>
         </p>
@@ -24,9 +24,9 @@
             <input type="password" id="password" name="password" class="form-control" placeholder="パスワード" required>
         </p>
         <button class="btn btn-lg btn-primary btn-block" type="submit">ログイン</button>
+
         <button class="btn btn-lg btn-primary btn-block" type=“button” onclick="location.href='/signup'">サインアップ</button>
     </form>
-
 </div>
 </body>
 </html>
